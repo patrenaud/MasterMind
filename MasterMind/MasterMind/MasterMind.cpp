@@ -61,11 +61,10 @@ void ShowGrid(std::vector<std::vector<std::string>> &Grid, std::vector<std::stri
 			std::cout << "| "<< Grid[i][0] << " | " << Grid[i][1] << " | " << Grid[i][2] << " | " << Grid[i][3] << " |" << std::endl;
 			std::cout << "+---+---+---+---+" << std::endl;
 		}
+
+		if (round == 10)
+		{
+			std::cout << "Vous avez perdu, la solution était: " << CPU[0] << CPU[1] << CPU[2] << CPU[3] << std::endl;
+		}
 	} while (Win == 1 || round == 10);
-
-	if (round == 10)
-	{
-		std::cout << "Vous avez perdu, la solution était: " << CPU[0] << CPU[1] << CPU[2] << CPU[3] << std::endl;
-	}
-
 }
